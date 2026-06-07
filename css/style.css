@@ -129,7 +129,7 @@ body {
   animation: fadeUp 0.55s ease both;
 }
 .hero-eyebrow {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -145,7 +145,7 @@ body {
   margin-bottom: 0.3rem;
 }
 .hero-sub {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   font-weight: 300;
 }
