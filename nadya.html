@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#000d1a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <title>Welcome</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ╔══════════════════════════════╗
+       ║  EDIT ONLY THIS BLOCK BELOW  ║
+       ╚══════════════════════════════╝ -->
+  <script>
+    window.HOUSE_CONFIG = {
+      name:         " Guesthouse Nadya",
+      wifiName:      "MERCUSYS_845D",
+      wifiPassword: "53060979",
+      phoneBG:        "+359896850855",
+      phoneEN:        "+359888614532",
+      reviewUrl:    "https://g.page/r/CSFkPyS3GrIcEBI/review",
+      amenities: [
+        { icon: "🕒", en: "Check-in: 3:00 PM",  bg: "Настаняване: 15:00" },
+        { icon: "🕒", en: "Check-out: 11:00 AM", bg: "Напускане: 11:00"  },
+        { icon: "👥", en: "Up to 8 guests",       bg: "До 8 гости"        },
+        { icon: "📍", en: "Beachfront",           bg: "До плажа"          },
+      ],
+    }
+  </script>
+</head>
+<body>
+  <div id="overlay"></div>
+
+  <div id="lang-switcher">
+    <button id="lang-btn" class="lang-btn"><span id="lang-flag">🇧🇬</span></button>
+    <div id="dropdown-menu" class="dropdown hidden">
+      <button class="dropdown-item" onclick="setLanguage('en')">🇺🇸 English</button>
+      <button class="dropdown-item" onclick="setLanguage('bg')">🇧🇬 Български</button>
+    </div>
+  </div>
+
+  <div id="page"></div>
+  <div id="toast" class="hidden"></div>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
