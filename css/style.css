@@ -25,18 +25,25 @@ body {
   font-family: var(--font-body);
   font-weight: 300;
   color: var(--text-primary);
+  /* Remove the background from here */
   min-height: 100vh;
   min-height: 100dvh;
-  background: url('../assets/bg_wallpaper.webp') no-repeat center center / cover fixed;
   overscroll-behavior: none;
+  background-color: #000; /* Fallback color */
 }
 
 #overlay {
   position: fixed;
-  inset: 0;
-  background: linear-gradient(160deg, rgba(0,20,42,0.58) 0%, rgba(0,12,32,0.48) 55%, rgba(0,32,22,0.52) 100%);
+  inset: 0; /* Ensures it covers 100% of the screen */
+  /* Combine your wallpaper and your gradient here */
+  background: 
+    linear-gradient(160deg, rgba(0,20,42,0.58) 0%, rgba(0,12,32,0.48) 55%, rgba(0,32,22,0.52) 100%),
+    url('../assets/bg_wallpaper.webp') no-repeat center center / cover;
   z-index: 0;
   pointer-events: none;
+  /* This prevents the "white gap" during scrolling */
+  height: 100%;
+  width: 100%;
 }
 
 #page {
