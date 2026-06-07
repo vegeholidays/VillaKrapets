@@ -277,3 +277,17 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.amenity-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.amenity-link .amenity-item {
+  cursor: pointer;
+}
+
+.amenity-link:active {
+  transform: scale(0.97);
+}
