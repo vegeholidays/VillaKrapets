@@ -1,6 +1,7 @@
 let lang = "bg"
 
 function render() {
+  if (!window.HOUSE_CONFIG || !translations) return;
   const t = translations[lang]
   const c = window.HOUSE_CONFIG
 
