@@ -73,7 +73,7 @@ function handleCall() {
 
 function setLanguage(l) {
   lang = l
-  document.getElementById("lang-flag").textContent = l === "en" ? "🇺🇸" : "🇧🇬"
+  document.getElementById("lang-flag").textContent = l === "en" ? "🇬🇧" : "🇧🇬"
   document.getElementById("dropdown-menu").classList.add("hidden")
   render()
 }
