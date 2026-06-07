@@ -166,12 +166,12 @@ body {
 
 .card-title {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 0.85rem;
   text-align: center;
 }
-.card > p {
+.card > p:not(.card-title) {
   font-size: 0.85rem;
   line-height: 1.75;
   color: var(--text-secondary);
