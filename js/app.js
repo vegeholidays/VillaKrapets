@@ -6,8 +6,21 @@ function render() {
 
   document.title = t.eyebrow + " " + c.name
 
+  // Updated loop to conditionally handle clickable links
   const chips = c.amenities
-    .map(a => `<div class="amenity-item">${a.icon} ${lang === "bg" ? a.bg : a.en}</div>`)
+    .map(a => {
+      const text = lang === "bg" ? a.bg : a.en;
+      
+      if (a.url) {
+        return `
+          <a href="${a.url}" target="_blank" rel="noopener noreferrer" class="amenity-link">
+            <div class="amenity-item">${a.icon} ${text}</div>
+          </a>
+        `;
+      }
+      
+      return `<div class="amenity-item">${a.icon} ${text}</div>`;
+    })
     .join("")
 
   document.getElementById("page").innerHTML = `
@@ -68,7 +81,6 @@ function handleReview() {
 
 function handleCall() {
   window.location.href = "tel:" + (lang === "en" ? window.HOUSE_CONFIG.phoneEN : window.HOUSE_CONFIG.phoneBG)
-
 }
 
 function setLanguage(l) {
