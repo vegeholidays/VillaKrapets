@@ -78,7 +78,18 @@ body {
   transition: background 0.15s, transform 0.1s var(--ease-spring);
 }
 .lang-btn:active { transform: scale(0.93); }
+/* Make the flag bigger */
+#lang-flag {
+  font-size: 1.35rem;        /* ← Main size control */
+  line-height: 1;
+  display: inline-block;
+  margin-top: -0.1rem;        /* fine-tune vertical alignment if needed */
+}
 
+/* Optional: Make the text part slightly smaller relative to the flag */
+.lang-btn span:not(#lang-flag) {
+  font-size: 0.9rem;
+}
 .dropdown {
   position: absolute;
   top: calc(100% + 0.7rem);
